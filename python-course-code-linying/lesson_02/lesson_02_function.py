@@ -6,7 +6,7 @@ def func(x, y = 500):
 
 func(150)
 func(100, 200)
-func(y = 300, x = 100)
+func(y = 300, x = 100) # 参数可以随时调换
 
 # 可变参数
 def func(name, *numbers):
@@ -28,7 +28,7 @@ def func(*, china, uk): # *用于和普通参数做分割，*args一样效果
 
 func(china = 'Beijing', uk = 'London')  # 必须传入参数名
 
-# 复杂情况
+# 复杂情况 --- 注意顺序：位置参数，默认参数，可变参数和命名关键字参数
 def func(a, b, c = 0, *args, **kvs):
     print(a, b, c, args, kvs)
 
